@@ -67,7 +67,7 @@ class _UnoSimpleCardState extends State<UnoSimpleCard> {
                 borderRadius: BorderRadius.circular(5),
 
               ),
-              child: Center(child: Text(' ${widget.CardText} svsd sd sd sd sds s s sc mjc  hjhcjh',style:widget.CardTextStyle == null ?  TextStyle(fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis,color: Colors.black): widget.CardTextStyle,textAlign: TextAlign.center,maxLines: 4,)),
+              child: Center(child: Text(' ${widget.CardText}',style:widget.CardTextStyle == null ?  TextStyle(fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis,color: Colors.black): widget.CardTextStyle,textAlign: TextAlign.center,maxLines: 4,)),
             ),
           ],
         ),
