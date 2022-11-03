@@ -28,7 +28,7 @@ class _ShowCaseCardState extends State<ShowCaseCard> {
                  Container(
                    width: 170,
                    decoration: BoxDecoration(
-                       color:widget.ImageBackGroundColor == null ?  Color(0xff303791) : widget.ImageBackGroundColor,
+                       color:widget.TextBackGroundColor == null ?  Color(0xff303791) : widget.TextBackGroundColor,
                        borderRadius: BorderRadius.only(topLeft: Radius.circular(102),topRight: Radius.circular(102),bottomLeft: Radius.circular(12),bottomRight: Radius.circular(12),)
                    ),
                    child: Column(

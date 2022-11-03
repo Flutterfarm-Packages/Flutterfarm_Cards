@@ -6,8 +6,8 @@ class UnoHorizontalSingleColorCard extends StatefulWidget {
   final Image InitialImage;
   final CardText;
   final TextStyle? CardTextStyle;
-  final   TextBackGroundColor;
-  const UnoHorizontalSingleColorCard({Key? key, this.CardColor,required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor}) : super(key: key);
+
+  const UnoHorizontalSingleColorCard({Key? key, this.CardColor,required this.CardText, this.CardTextStyle, required this.InitialImage,}) : super(key: key);
 
   @override
   _UnoHorizontalSingleColorCardState createState() => _UnoHorizontalSingleColorCardState();
@@ -29,7 +29,7 @@ class _UnoHorizontalSingleColorCardState extends State<UnoHorizontalSingleColorC
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: EdgeInsets.only(right: 3,left: 3),
+              padding: EdgeInsets.all(5),
               width: 110,
 
 

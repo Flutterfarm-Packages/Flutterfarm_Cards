@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 
 class UnoVerticalCard extends StatefulWidget {
-  final Color? CardColor;
+
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final   TextBackGroundColor;
-  const UnoVerticalCard({Key? key, this.CardColor,required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor, this.ImageBackGroundColor}) : super(key: key);
+  const UnoVerticalCard({Key? key, required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor, this.ImageBackGroundColor}) : super(key: key);
 
   @override
   _UnoVerticalCardState createState() => _UnoVerticalCardState();
@@ -31,7 +31,7 @@ class _UnoVerticalCardState extends State<UnoVerticalCard> {
               ),
               blurRadius:15.0,
             ),         ],
-          color:widget.CardColor==null ? Colors.white : widget.CardColor,
+          color:widget.TextBackGroundColor==null ? Colors.white : widget.TextBackGroundColor,
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,

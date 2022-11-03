@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 
 class UnoVerticalReverseCard extends StatefulWidget {
-  final Color? CardColor;
+
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final   TextBackGroundColor;
-  const UnoVerticalReverseCard({Key? key, this.CardColor,required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor, this.ImageBackGroundColor}) : super(key: key);
+  const UnoVerticalReverseCard({Key? key, required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor, this.ImageBackGroundColor}) : super(key: key);
 
   @override
   _UnoVerticalReverseCardState createState() => _UnoVerticalReverseCardState();

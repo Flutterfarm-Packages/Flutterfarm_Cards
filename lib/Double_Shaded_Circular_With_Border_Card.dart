@@ -20,8 +20,8 @@ class _DoubleShadedCircularWithBorderCardState extends State<DoubleShadedCircula
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.all(12),
-        width: 150,height: 212,
+        padding: EdgeInsets.symmetric(vertical: 8,horizontal: 12),
+        width: 150,height: 222,
         decoration: BoxDecoration(
           border:widget.BorderStyle==null ? Border.all(width: 0.5,color: Colors.grey) : widget.BorderStyle,
           borderRadius: BorderRadius.circular(4),
@@ -47,13 +47,13 @@ class _DoubleShadedCircularWithBorderCardState extends State<DoubleShadedCircula
               ),
             ),
             Container(
-              padding: EdgeInsets.only(right: 5,top: 12,bottom: 12),
+              padding: EdgeInsets.only(right: 5,top: 8,bottom: 5),
 
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
 
               ),
-              child: Center(child: Text('${widget.CardText} ',style:widget.CardTextStyle == null ?  TextStyle(fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis,color: Colors.black): widget.CardTextStyle,textAlign: TextAlign.center,maxLines: 3,)),
+              child: Center(child: Text('${widget.CardText}',style:widget.CardTextStyle == null ?  TextStyle(fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis,color: Colors.black): widget.CardTextStyle,textAlign: TextAlign.center,maxLines: 3,)),
             ),
           ],
         ),

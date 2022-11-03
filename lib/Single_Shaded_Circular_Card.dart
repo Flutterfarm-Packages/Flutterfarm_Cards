@@ -39,7 +39,7 @@ class _SingleShadedCircularCardState extends State<SingleShadedCircularCard> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(12),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color:widget.ImageBackGroundColor == null ? Color(0xffebf1f6): widget.ImageBackGroundColor,

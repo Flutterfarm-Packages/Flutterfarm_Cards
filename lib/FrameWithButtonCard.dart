@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 
 class FrameWithButtonCard extends StatefulWidget {
-  final Color? CardColor;
+
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final   TextBackGroundColor;
-  const FrameWithButtonCard({Key? key, this.CardColor,required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor, this.ImageBackGroundColor}) : super(key: key);
+  const FrameWithButtonCard({Key? key ,required this.CardText, this.CardTextStyle, required this.InitialImage, this.TextBackGroundColor, this.ImageBackGroundColor}) : super(key: key);
 
   @override
   _FrameWithButtonCardState createState() => _FrameWithButtonCardState();
@@ -42,7 +42,7 @@ class _FrameWithButtonCardState extends State<FrameWithButtonCard> {
            // color:widget.TextBackGroundColor==null ? Color(0xff303791) : widget.TextBackGroundColor,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
@@ -59,7 +59,7 @@ class _FrameWithButtonCardState extends State<FrameWithButtonCard> {
                 ),
                 child: widget.InitialImage,
               ),
-              SizedBox(height: 15),
+
               Center(
                 child: Container(
                   padding: EdgeInsets.only(right: 5,top: 5,bottom: 5,left: 5),

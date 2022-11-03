@@ -6,7 +6,8 @@ class UnoSimpleCard extends StatefulWidget {
   final Image InitialImage;
   final CardText;
   final TextStyle? CardTextStyle;
-  const UnoSimpleCard({Key? key, required this.CardText, this.CardTextStyle, required this.InitialImage}) : super(key: key);
+  final Color? CardColor;
+  const UnoSimpleCard({Key? key, required this.CardText, this.CardTextStyle, required this.InitialImage, this.CardColor}) : super(key: key);
 
   @override
   _UnoSimpleCardState createState() => _UnoSimpleCardState();
@@ -17,10 +18,23 @@ class _UnoSimpleCardState extends State<UnoSimpleCard> {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        padding: EdgeInsets.all(0),
+        padding: EdgeInsets.all(10),
         width: 150,
-        decoration: BoxDecoration(
-          color: Colors.red,
+        decoration:widget.CardColor != null ? BoxDecoration(
+
+          borderRadius: BorderRadius.circular(12),
+         color: widget.CardColor,
+          boxShadow: [
+            BoxShadow(
+              color:Color(0xffd2cece),
+              offset:  Offset(
+                1.0,
+                3.0,
+              ),
+              blurRadius:15.0,
+            ),         ],
+        ) : BoxDecoration(
+
           borderRadius: BorderRadius.circular(12),
           image: DecorationImage(
             image: AssetImage('assets/bubble.png',),fit: BoxFit.fill
@@ -40,6 +54,7 @@ class _UnoSimpleCardState extends State<UnoSimpleCard> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
+              height: 130,
               padding: EdgeInsets.all(0),
               decoration: BoxDecoration(
               ),
@@ -52,7 +67,7 @@ class _UnoSimpleCardState extends State<UnoSimpleCard> {
                 borderRadius: BorderRadius.circular(5),
 
               ),
-              child: Center(child: Text(' ${widget.CardText}',style:widget.CardTextStyle == null ?  TextStyle(fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis,color: Colors.black): widget.CardTextStyle,textAlign: TextAlign.center,maxLines: 4,)),
+              child: Center(child: Text(' ${widget.CardText} svsd sd sd sd sds s s sc mjc  hjhcjh',style:widget.CardTextStyle == null ?  TextStyle(fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis,color: Colors.black): widget.CardTextStyle,textAlign: TextAlign.center,maxLines: 4,)),
             ),
           ],
         ),
