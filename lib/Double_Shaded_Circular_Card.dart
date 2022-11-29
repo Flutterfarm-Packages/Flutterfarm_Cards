@@ -35,7 +35,7 @@ class _DoubleShadedCircularCardState extends State<DoubleShadedCircularCard> {
                 color:widget.OuterColor == null ? Color(0xffebf1f6): widget.OuterColor,
               ),
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color:widget.InnerColor == null ? Color(0xFFd4e8f6): widget.InnerColor,
