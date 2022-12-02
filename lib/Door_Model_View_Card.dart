@@ -54,7 +54,7 @@ class _DoorModelViewCardState extends State<DoorModelViewCard> {
           ),
           Center(
             child: Text(
-              'Fashion ',
+              '${widget.CardText}',
               style: widget.CardTextStyle == null
                   ? TextStyle(color: Colors.white)
                   : widget.CardTextStyle,
