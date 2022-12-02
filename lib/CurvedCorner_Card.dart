@@ -1,3 +1,7 @@
+/**************************
+ Copyright: FlutterFarm
+ **************************/
+ 
 import 'package:flutter/material.dart';
 
 class CurvedCornerCard extends StatefulWidget {
