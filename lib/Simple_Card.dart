@@ -47,7 +47,7 @@ class _SimpleCardState extends State<SimpleCard> {
                 borderRadius: BorderRadius.circular(12),
                 image: DecorationImage(
                     image: AssetImage(
-                      'assets/bubble.png',
+                      'assets/bubbles.png',
                     ),
                     fit: BoxFit.fill),
                 boxShadow: [

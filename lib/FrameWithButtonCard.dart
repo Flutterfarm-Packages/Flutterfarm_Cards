@@ -68,7 +68,7 @@ class _FrameWithButtonCardState extends State<FrameWithButtonCard> {
                   image: widget.ImageBackGroundColor == null
                       ? DecorationImage(
                           image: AssetImage(
-                            'assets/bubble.png',
+                            'assets/bubbles.png',
                           ),
                           fit: BoxFit.fill)
                       : null,
