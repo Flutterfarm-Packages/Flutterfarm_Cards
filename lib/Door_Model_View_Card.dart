@@ -1,7 +1,3 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
 class DoorModelViewCard extends StatefulWidget {
@@ -31,9 +27,9 @@ class _DoorModelViewCardState extends State<DoorModelViewCard> {
       width: 150,
       padding: EdgeInsets.symmetric(vertical: 12, horizontal: 15),
       decoration: BoxDecoration(
-          color: widget.ImageBackGroundColor == null
+          color: widget.TextBackGroundColor == null
               ? Color(0xff303791)
-              : widget.ImageBackGroundColor,
+              : widget.TextBackGroundColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(102),
             topRight: Radius.circular(102),
@@ -45,7 +41,10 @@ class _DoorModelViewCardState extends State<DoorModelViewCard> {
           Container(
               padding: EdgeInsets.all(12),
               decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: Color(0xFF817DAF)),
+                  shape: BoxShape.circle,
+                  color: widget.ImageBackGroundColor == null
+                      ? Color(0xFF817DAF)
+                      : widget.ImageBackGroundColor),
               child: Center(
                 child: widget.InitialImage,
               )),
@@ -54,9 +53,10 @@ class _DoorModelViewCardState extends State<DoorModelViewCard> {
           ),
           Center(
             child: Text(
-              '${widget.CardText}',
+              '${widget.CardText} ',
+              textAlign: TextAlign.center,
               style: widget.CardTextStyle == null
-                  ? TextStyle(color: Colors.white)
+                  ? TextStyle(color: Colors.white, fontWeight: FontWeight.w500)
                   : widget.CardTextStyle,
             ),
           )

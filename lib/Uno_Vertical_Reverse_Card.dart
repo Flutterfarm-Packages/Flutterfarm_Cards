@@ -1,16 +1,12 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
-class VerticalReverseCard extends StatefulWidget {
+class UnoVerticalReverseCard extends StatefulWidget {
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final TextBackGroundColor;
-  const VerticalReverseCard(
+  const UnoVerticalReverseCard(
       {Key? key,
       required this.CardText,
       this.CardTextStyle,
@@ -20,10 +16,10 @@ class VerticalReverseCard extends StatefulWidget {
       : super(key: key);
 
   @override
-  _VerticalReverseCardState createState() => _VerticalReverseCardState();
+  _UnoVerticalReverseCardState createState() => _UnoVerticalReverseCardState();
 }
 
-class _VerticalReverseCardState extends State<VerticalReverseCard> {
+class _UnoVerticalReverseCardState extends State<UnoVerticalReverseCard> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -63,7 +59,7 @@ class _VerticalReverseCardState extends State<VerticalReverseCard> {
                 image: widget.ImageBackGroundColor == null
                     ? DecorationImage(
                         image: AssetImage(
-                          'assets/bubbles.png',
+                          'assets/bubble.png',
                         ),
                         fit: BoxFit.fill)
                     : null,
@@ -86,7 +82,7 @@ class _VerticalReverseCardState extends State<VerticalReverseCard> {
                 '${widget.CardText}',
                 style: widget.CardTextStyle == null
                     ? TextStyle(
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w500,
                         overflow: TextOverflow.ellipsis,
                         color: Color(0xffffffff))
                     : widget.CardTextStyle,

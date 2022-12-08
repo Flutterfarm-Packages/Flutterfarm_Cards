@@ -1,10 +1,6 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
-class HorizontalCard extends StatefulWidget {
+class UnoHorizontalCard extends StatefulWidget {
   final Color? CardColor;
   final gradientColor1;
   final gradientColor2;
@@ -14,7 +10,7 @@ class HorizontalCard extends StatefulWidget {
   final CardText;
   final TextStyle? CardTextStyle;
   final TextBackGroundColor;
-  const HorizontalCard(
+  const UnoHorizontalCard(
       {Key? key,
       this.CardColor,
       required this.CardText,
@@ -28,10 +24,10 @@ class HorizontalCard extends StatefulWidget {
       : super(key: key);
 
   @override
-  _HorizontalCardState createState() => _HorizontalCardState();
+  _UnoHorizontalCardState createState() => _UnoHorizontalCardState();
 }
 
-class _HorizontalCardState extends State<HorizontalCard> {
+class _UnoHorizontalCardState extends State<UnoHorizontalCard> {
   @override
   Widget build(BuildContext context) {
     return Center(

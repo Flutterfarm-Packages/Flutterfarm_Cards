@@ -1,7 +1,3 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
 class ShowCaseCard extends StatefulWidget {
@@ -60,7 +56,9 @@ class _ShowCaseCardState extends State<ShowCaseCard> {
                           child: Text(
                             widget.CardText,
                             style: widget.CardTextStyle == null
-                                ? TextStyle(color: Colors.white)
+                                ? TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500)
                                 : widget.CardTextStyle,
                           ),
                         )),

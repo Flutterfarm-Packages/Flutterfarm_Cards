@@ -1,7 +1,3 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
 class FrameWithButtonCard extends StatefulWidget {
@@ -55,8 +51,8 @@ class _FrameWithButtonCardState extends State<FrameWithButtonCard> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                height: 110,
-                width: 150,
+                height: 140,
+                width: 180,
                 padding: EdgeInsets.only(right: 0, left: 0, top: 0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -68,7 +64,7 @@ class _FrameWithButtonCardState extends State<FrameWithButtonCard> {
                   image: widget.ImageBackGroundColor == null
                       ? DecorationImage(
                           image: AssetImage(
-                            'assets/bubbles.png',
+                            'assets/bubble.png',
                           ),
                           fit: BoxFit.fill)
                       : null,
@@ -109,7 +105,7 @@ class _FrameWithButtonCardState extends State<FrameWithButtonCard> {
                       '${widget.CardText}',
                       style: widget.CardTextStyle == null
                           ? TextStyle(
-                              fontWeight: FontWeight.w400,
+                              fontWeight: FontWeight.w500,
                               fontSize: 13,
                               overflow: TextOverflow.ellipsis,
                               color: Color(0xffffffff))

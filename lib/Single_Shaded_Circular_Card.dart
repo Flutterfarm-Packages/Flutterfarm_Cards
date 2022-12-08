@@ -1,7 +1,3 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
 class SingleShadedCircularCard extends StatefulWidget {

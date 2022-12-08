@@ -1,16 +1,12 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
-class VerticalCard extends StatefulWidget {
+class UnoVerticalCard extends StatefulWidget {
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final TextBackGroundColor;
-  const VerticalCard(
+  const UnoVerticalCard(
       {Key? key,
       required this.CardText,
       this.CardTextStyle,
@@ -20,10 +16,10 @@ class VerticalCard extends StatefulWidget {
       : super(key: key);
 
   @override
-  _VerticalCardState createState() => _VerticalCardState();
+  _UnoVerticalCardState createState() => _UnoVerticalCardState();
 }
 
-class _VerticalCardState extends State<VerticalCard> {
+class _UnoVerticalCardState extends State<UnoVerticalCard> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -51,7 +47,7 @@ class _VerticalCardState extends State<VerticalCard> {
             Container(
               height: 120,
               width: 150,
-              padding: EdgeInsets.only(right: 3, left: 3),
+              padding: EdgeInsets.only(right: 3, left: 3, top: 5, bottom: 5),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(12),

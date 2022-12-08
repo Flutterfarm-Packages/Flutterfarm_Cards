@@ -1,16 +1,12 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
-class HorizontalSingleColorCard extends StatefulWidget {
+class UnoHorizontalSingleColorCard extends StatefulWidget {
   final Color? CardColor;
   final Image InitialImage;
   final CardText;
   final TextStyle? CardTextStyle;
 
-  const HorizontalSingleColorCard({
+  const UnoHorizontalSingleColorCard({
     Key? key,
     this.CardColor,
     required this.CardText,
@@ -19,12 +15,12 @@ class HorizontalSingleColorCard extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _HorizontalSingleColorCardState createState() =>
-      _HorizontalSingleColorCardState();
+  _UnoHorizontalSingleColorCardState createState() =>
+      _UnoHorizontalSingleColorCardState();
 }
 
-class _HorizontalSingleColorCardState
-    extends State<HorizontalSingleColorCard> {
+class _UnoHorizontalSingleColorCardState
+    extends State<UnoHorizontalSingleColorCard> {
   @override
   Widget build(BuildContext context) {
     return Center(

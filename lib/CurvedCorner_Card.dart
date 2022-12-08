@@ -1,7 +1,3 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
 class CurvedCornerCard extends StatefulWidget {
@@ -64,14 +60,9 @@ class _CurvedCornerCardState extends State<CurvedCornerCard> {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  shape: BoxShape.circle),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: widget.InitialImage,
-              ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: widget.InitialImage,
             ),
             Container(
               padding: EdgeInsets.only(right: 5, top: 5, bottom: 5),

@@ -1,15 +1,11 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
-class SimpleCard extends StatefulWidget {
+class UnoSimpleCard extends StatefulWidget {
   final Image InitialImage;
   final CardText;
   final TextStyle? CardTextStyle;
   final Color? CardColor;
-  const SimpleCard(
+  const UnoSimpleCard(
       {Key? key,
       required this.CardText,
       this.CardTextStyle,
@@ -18,10 +14,10 @@ class SimpleCard extends StatefulWidget {
       : super(key: key);
 
   @override
-  _SimpleCardState createState() => _SimpleCardState();
+  _UnoSimpleCardState createState() => _UnoSimpleCardState();
 }
 
-class _SimpleCardState extends State<SimpleCard> {
+class _UnoSimpleCardState extends State<UnoSimpleCard> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -47,7 +43,7 @@ class _SimpleCardState extends State<SimpleCard> {
                 borderRadius: BorderRadius.circular(12),
                 image: DecorationImage(
                     image: AssetImage(
-                      'assets/bubbles.png',
+                      'assets/bubble.png',
                     ),
                     fit: BoxFit.fill),
                 boxShadow: [
@@ -72,13 +68,13 @@ class _SimpleCardState extends State<SimpleCard> {
               child: widget.InitialImage,
             ),
             Container(
-              padding: EdgeInsets.only(right: 5, top: 2, bottom: 5),
+              padding: EdgeInsets.only(right: 5, top: 5, bottom: 5),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Center(
                   child: Text(
-                ' ${widget.CardText} svsd sd sd sd sds s s sc mjc  hjhcjh',
+                ' ${widget.CardText}',
                 style: widget.CardTextStyle == null
                     ? TextStyle(
                         fontWeight: FontWeight.w600,

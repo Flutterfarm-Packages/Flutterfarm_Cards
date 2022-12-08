@@ -1,7 +1,3 @@
-/**************************
- Copyright: FlutterFarm
- **************************/
- 
 import 'package:flutter/material.dart';
 
 class DoubleColor3DCard extends StatefulWidget {
@@ -70,7 +66,7 @@ class _DoubleColor3DCardState extends State<DoubleColor3DCard> {
                   image: widget.ImageBackGroundColor == null
                       ? DecorationImage(
                           image: AssetImage(
-                            'assets/bubbles.png',
+                            'assets/bubble.png',
                           ),
                           fit: BoxFit.fill)
                       : null,
