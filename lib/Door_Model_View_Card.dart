@@ -39,7 +39,7 @@ class _DoorModelViewCardState extends State<DoorModelViewCard> {
       child: Column(
         children: [
           Container(
-              padding: EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: widget.ImageBackGroundColor == null
