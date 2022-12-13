@@ -1,40 +1,32 @@
 import 'package:flutter/material.dart';
 
-class UnoHorizontalCard extends StatefulWidget {
-  final Color? CardColor;
-  final gradientColor1;
-  final gradientColor2;
-  final bool enableGradient;
+class VerticalReverseCard extends StatefulWidget {
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final TextBackGroundColor;
-  const UnoHorizontalCard(
+  const VerticalReverseCard(
       {Key? key,
-      this.CardColor,
       required this.CardText,
       this.CardTextStyle,
       required this.InitialImage,
       this.TextBackGroundColor,
-      this.ImageBackGroundColor,
-      this.gradientColor1,
-      this.gradientColor2,
-      required this.enableGradient})
+      this.ImageBackGroundColor})
       : super(key: key);
 
   @override
-  _UnoHorizontalCardState createState() => _UnoHorizontalCardState();
+  _VerticalReverseCardState createState() => _VerticalReverseCardState();
 }
 
-class _UnoHorizontalCardState extends State<UnoHorizontalCard> {
+class _VerticalReverseCardState extends State<VerticalReverseCard> {
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        height: 90,
+        width: 140,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
+          borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
               color: Color(0xffd2cece),
@@ -45,50 +37,53 @@ class _UnoHorizontalCardState extends State<UnoHorizontalCard> {
               blurRadius: 15.0,
             ),
           ],
-          color: widget.CardColor == null ? Colors.white : widget.CardColor,
+          color: widget.TextBackGroundColor == null
+              ? Color(0xff303791)
+              : widget.TextBackGroundColor,
         ),
-        child: Row(
+        child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: EdgeInsets.only(right: 15, left: 3, top: 5),
-              width: 110,
-              height: 100,
+              height: 120,
+              width: 150,
+              padding: EdgeInsets.only(right: 0, left: 0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(5),
-                  bottomLeft: Radius.circular(5),
-                  topRight: Radius.circular(72),
-                  bottomRight: Radius.circular(2),
+                  topLeft: Radius.circular(12),
+                  bottomLeft: Radius.circular(15),
+                  topRight: Radius.circular(12),
+                  bottomRight: Radius.circular(15),
                 ),
-                gradient: widget.enableGradient
-                    ? LinearGradient(
-                        colors: [widget.gradientColor1, widget.gradientColor2])
+                image: widget.ImageBackGroundColor == null
+                    ? DecorationImage(
+                        image: AssetImage(
+                          'assets/bubble.png',
+                        ),
+                        fit: BoxFit.fill)
                     : null,
-                color: widget.ImageBackGroundColor == null &&
-                        widget.enableGradient == false
-                    ? Color(0xF1EDEDFF)
+                color: widget.ImageBackGroundColor == null
+                    ? Color(0xFFFFFFFF)
                     : widget.ImageBackGroundColor,
               ),
               child: widget.InitialImage,
             ),
             Container(
-              padding: EdgeInsets.only(right: 5, top: 5, bottom: 5),
-              width: 150,
+              padding: EdgeInsets.only(right: 5, top: 12, bottom: 5, left: 5),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: widget.TextBackGroundColor == null
-                    ? Colors.white
+                    ? Color(0xff303791)
                     : widget.TextBackGroundColor,
               ),
               child: Center(
                   child: Text(
-                ' ${widget.CardText}',
+                '${widget.CardText}',
                 style: widget.CardTextStyle == null
                     ? TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 15,
-                        overflow: TextOverflow.ellipsis)
+                        fontWeight: FontWeight.w500,
+                        overflow: TextOverflow.ellipsis,
+                        color: Color(0xffffffff))
                     : widget.CardTextStyle,
                 textAlign: TextAlign.center,
                 maxLines: 4,

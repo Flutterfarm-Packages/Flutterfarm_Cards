@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HalfWayProductCard extends StatelessWidget {
   final Color cardColor;
   final double? cardWidth;
-  final Image productImage;
+  final productImage;
   final List productDetails;
   final Widget button;
   const HalfWayProductCard(
@@ -18,9 +18,7 @@ class HalfWayProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: cardWidth == null
-          ? MediaQuery.of(context).size.width * 0.6
-          : cardWidth,
+
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -39,24 +37,27 @@ class HalfWayProductCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight),
       ),
-      child: Column(
-        children: [
-          SizedBox(
-            height: 10,
-          ),
-          productImage,
-          SizedBox(
-            height: 10,
-          ),
-          for (int i = 0; i < productDetails.length; i++) productDetails[i],
-          SizedBox(
-            height: 25,
-          ),
-          button,
-          SizedBox(
-            height: 25,
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(25),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 10,
+            ),
+            productImage,
+            SizedBox(
+              height: 10,
+            ),
+            for (int i = 0; i < productDetails.length; i++) productDetails[i],
+            SizedBox(
+              height: 25,
+            ),
+            button,
+            SizedBox(
+              height: 25,
+            ),
+          ],
+        ),
       ),
     );
   }

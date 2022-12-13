@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class UnoVerticalCard extends StatefulWidget {
+class VerticalCard extends StatefulWidget {
   final Image InitialImage;
   final Color? ImageBackGroundColor;
   final CardText;
   final TextStyle? CardTextStyle;
   final TextBackGroundColor;
-  const UnoVerticalCard(
+  const VerticalCard(
       {Key? key,
       required this.CardText,
       this.CardTextStyle,
@@ -16,10 +16,10 @@ class UnoVerticalCard extends StatefulWidget {
       : super(key: key);
 
   @override
-  _UnoVerticalCardState createState() => _UnoVerticalCardState();
+  _VerticalCardState createState() => _VerticalCardState();
 }
 
-class _UnoVerticalCardState extends State<UnoVerticalCard> {
+class _VerticalCardState extends State<VerticalCard> {
   @override
   Widget build(BuildContext context) {
     return Center(

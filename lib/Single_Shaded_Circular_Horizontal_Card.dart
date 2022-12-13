@@ -25,9 +25,8 @@ class _SingleShadedCircularHorizontalCardState
     return Center(
       child: Container(
         padding: EdgeInsets.symmetric(
-          vertical: 7,
+          vertical: 7,horizontal: 10
         ),
-        height: 90,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
@@ -47,7 +46,7 @@ class _SingleShadedCircularHorizontalCardState
           children: [
             Container(
               width: 100,
-              padding: EdgeInsets.all(5),
+              padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: widget.ImageBackgroundColor == null

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class ImageSliderProductCard extends StatefulWidget {
@@ -27,79 +29,100 @@ class _ImageSliderProductCardState extends State<ImageSliderProductCard> {
   late PageController pageController;
 
   int pageNo = 0;
+  Timer? carasouelTmer;
+
+  Timer getTimer() {
+    return Timer.periodic(const Duration(seconds: 3), (timer) {
+      if (pageNo == widget.productImages) {
+        setState(() {
+          pageNo = 0;
+        });
+      }
+      pageController.animateToPage(
+        pageNo,
+        duration: const Duration(seconds: 1),
+        curve: Curves.easeInOutCirc,
+      );
+      pageNo++;
+    });
+  }
 
   @override
   void initState() {
     pageController = PageController(initialPage: 0);
-    pageNo = 0;
+
+    carasouelTmer =getTimer();
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: widget.cardWidth,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8), color: widget.cardColor),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 15,
-            ),
-            widget.subTitle,
-            SizedBox(
-              height: 15,
-            ),
-            widget.title,
-            SizedBox(
-              height: 10,
-            ),
-            widget.button!,
-            SizedBox(
-              height: 25,
-            ),
-            SizedBox(
-              height: 180,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: PageView(
-                  onPageChanged: (index) {
-                    setState(() {
-                      pageNo = index;
-                    });
-                    print(index);
-                  },
-                  controller: pageController,
-                  children: [
-                    for (int i = 0; i < widget.productImages.length; i++)
-                      widget.productImages[i],
-                  ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8), color: widget.cardColor),
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 15,
+              ),
+              widget.subTitle,
+              SizedBox(
+                height: 15,
+              ),
+              widget.title,
+              SizedBox(
+                height: 10,
+              ),
+              widget.button!,
+              SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                height: 180,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: PageView(
+                    onPageChanged: (index) {
+                      setState(() {
+                        pageNo = index;
+                      });
+                      print(index);
+                    },
+                    controller: pageController,
+                    children: [
+                      for (int i = 0; i < widget.productImages.length; i++)
+                        widget.productImages[i],
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                for (int i = 0; i < widget.productImages.length; i++)
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: pageNo == i
-                        ? Icon(
-                            Icons.circle,
-                            size: 12,
-                            color: Colors.white,
-                          )
-                        : Icon(
-                            Icons.circle_outlined,
-                            size: 12,
-                            color: Colors.white,
-                          ),
-                  )
-              ],
-            )
-          ],
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  for (int i = 0; i < widget.productImages.length; i++)
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: pageNo == i
+                          ? Icon(
+                              Icons.circle,
+                              size: 12,
+                              color: Colors.white,
+                            )
+                          : Icon(
+                              Icons.circle_outlined,
+                              size: 12,
+                              color: Colors.white,
+                            ),
+                    )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

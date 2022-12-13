@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class UnoHorizontalSingleColorCard extends StatefulWidget {
+class HorizontalSingleColorCard extends StatefulWidget {
   final Color? CardColor;
   final Image InitialImage;
   final CardText;
   final TextStyle? CardTextStyle;
 
-  const UnoHorizontalSingleColorCard({
+  const HorizontalSingleColorCard({
     Key? key,
     this.CardColor,
     required this.CardText,
@@ -15,12 +15,12 @@ class UnoHorizontalSingleColorCard extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _UnoHorizontalSingleColorCardState createState() =>
-      _UnoHorizontalSingleColorCardState();
+  _HorizontalSingleColorCardState createState() =>
+      _HorizontalSingleColorCardState();
 }
 
-class _UnoHorizontalSingleColorCardState
-    extends State<UnoHorizontalSingleColorCard> {
+class _HorizontalSingleColorCardState
+    extends State<HorizontalSingleColorCard> {
   @override
   Widget build(BuildContext context) {
     return Center(

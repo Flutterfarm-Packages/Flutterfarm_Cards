@@ -26,7 +26,7 @@ class _SingleShadedCircularCardState extends State<SingleShadedCircularCard> {
       child: Container(
         padding: EdgeInsets.all(15),
         width: 150,
-        height: 219,
+
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             boxShadow: [

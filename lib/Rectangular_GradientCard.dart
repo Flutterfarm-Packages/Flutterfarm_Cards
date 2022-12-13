@@ -56,13 +56,14 @@ class _RectangularGradientCardState extends State<RectangularGradientCard> {
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+
             Container(
-              padding: EdgeInsets.only(left: 0),
+              padding: EdgeInsets.only(left: 20),
               width: 180,
               child: Center(
-                  child: Column(
+               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -94,7 +95,11 @@ class _RectangularGradientCardState extends State<RectangularGradientCard> {
                 ],
               )),
             ),
-            widget.InitialImage,
+            Padding(
+              padding: EdgeInsets.only(right: 30),
+              child: widget.InitialImage,
+            ),
+
           ],
         ),
       ),

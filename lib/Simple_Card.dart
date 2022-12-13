@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class UnoSimpleCard extends StatefulWidget {
+class SimpleCard extends StatefulWidget {
   final Image InitialImage;
   final CardText;
   final TextStyle? CardTextStyle;
   final Color? CardColor;
-  const UnoSimpleCard(
+  const SimpleCard(
       {Key? key,
       required this.CardText,
       this.CardTextStyle,
@@ -14,10 +14,10 @@ class UnoSimpleCard extends StatefulWidget {
       : super(key: key);
 
   @override
-  _UnoSimpleCardState createState() => _UnoSimpleCardState();
+  _SimpleCardState createState() => _SimpleCardState();
 }
 
-class _UnoSimpleCardState extends State<UnoSimpleCard> {
+class _SimpleCardState extends State<SimpleCard> {
   @override
   Widget build(BuildContext context) {
     return Center(
